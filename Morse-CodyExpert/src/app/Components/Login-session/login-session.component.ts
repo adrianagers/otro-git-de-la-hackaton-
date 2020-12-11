@@ -41,11 +41,7 @@ export class LoginSessionComponent implements OnInit {
         (dataUser) => {
           this.storageService.saveToken(dataUser['token'])
           const infoUser = this.storageService.dataUser()
-          if (infoUser.role == 'Company') {
-            this.router.navigate(['/homeEmpresa'])
-          } else{
-            this.router.navigate(['/homeUser'])
-          } 
+          this.selectRole(infoUser)
         },
         (error) => {
           console.error('Error ->', error)
@@ -61,11 +57,7 @@ export class LoginSessionComponent implements OnInit {
         (dataCompany) => {
           this.storageService.saveToken(dataCompany['token'])
           const infoCompany = this.StorageCompanyService.dataCompany()
-          if (infoCompany.role == 'Programador') {
-            this.router.navigate(['/homeUser'])
-          }else{
-            this.router.navigate(['/homeEmpresa'])
-          } 
+          this.selectRole(infoCompany)
         },
         (error) => {
           console.error('Error ->', error)
@@ -75,4 +67,13 @@ export class LoginSessionComponent implements OnInit {
       alert('Debes llenar todos los campos ')
     }
   }  
+
+  selectRole(optionRole){
+    switch(optionRole){
+      case 'Company':
+        this.router.navigate(['/homeEmpresa'])
+      case 'programador':
+        this.router.navigate(['/homeUser'])
+    }
+  }
 }

@@ -1,5 +1,5 @@
-var contador;
-function calificar(item){
+let contador;
+function point(item){
   console.log(item);
   contador=item.id[0];
   let nombre =item.id.substring(1);

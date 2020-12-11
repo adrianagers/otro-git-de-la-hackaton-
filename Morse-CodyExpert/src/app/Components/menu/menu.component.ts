@@ -7,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() {
-  console.log('Aqui toy ')}
+  constructor() {}
 
   ngOnInit(): void {
   }

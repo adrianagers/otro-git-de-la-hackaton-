@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Exam } from '../Models/Exam';
+import{environment}from '../../environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
 export class ExamService {
-  apiUrl: String = 'https://coodyexpert-morse.herokuapp.com';
+  apiUrl: String = environment.api_url;
   constructor(
     private http: HttpClient
   ) { }
