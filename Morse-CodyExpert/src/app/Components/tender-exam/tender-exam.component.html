@@ -1,0 +1,99 @@
+<nav id="menu" class="navbar navbar-expand-lg fixed-top bg-pink">
+  <div class="container">
+    <a class="navbar-brand" routerLink="#">
+      <img src="assets/image/homeUser/LOGO-OSCURO.png" alt="logo" width="130px">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="text-align: center;">
+      <ul class="navbar-nav ml-auto">
+        <a class="navbar-brand" routerLink="/crearOferta" >
+          <i class="fas fa-arrow-circle-left"></i>
+          Volver a crear oferta
+
+        </a>
+      </ul>
+    </div>
+  </div>
+</nav>
+<form action="">
+  <section>
+    <div class="form-row" style="margin-top: 95px;">
+      <div class="col-md-6 mb-3">
+        <label for="validationTooltip01">Titulo examen</label>
+        <input formControlName="tituloExamen" type="text" class="form-control" id="validationTooltip01" value=""
+          required>
+        <div class="valid-tooltip">
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="exampleFormControlTextarea1">Descripcion Examen</label>
+        <textarea formControlName="descripcionExamen" class="form-control" id="exampleFormControlTextarea1"
+          rows="3">Escribir la descripcion del examen</textarea>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationTooltip01">Cargo</label>
+        <input formControlName="cargo" type="text" class="form-control" value=""
+          required>
+        <div class="valid-tooltip">
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="validationTooltip01">Salario</label>
+        <input formControlName="salario" type="text" class="form-control" value=""
+          required>
+        <div class="valid-tooltip">
+        </div>
+      </div>
+    </div>
+    <div class="form-row" >
+      <div class="form-group col-md-12" >
+        <label>Empresa que realiza el examen</label>
+        <input formControlName="empresa" type="text" class="form-control" value=""
+          required>
+        <div class="valid-tooltip">
+        </div>
+      </div>
+  </div>
+    <form>
+
+      <h3>Personalizado</h3>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Ingrese el link del examen personalizado</label>
+        <input formControlName="linkExamen" type="text" class="form-control" id="exampleFormControlInput1"
+          placeholder="Ingrese link correspondiente"
+          style=" border:transparent; border-bottom:3px solid rgb(15, 92, 105);">
+      </div>
+    </form>
+
+    <button type="submit" class="btn btn-primary my-1"> <a routerLink="/crearOferta"
+        style="text-decoration: none; color: white;">Enviar</a></button>
+  </section>
+
+</form>
+
+<div class="container-footer">
+  <div class="flex">
+    <a routerLink="https://www.facebook.com/Coody-Expert-100691765174664/?modal=admin_todo_tour"
+      style="color: rgb(245, 245, 245); font-size: 40px; margin-left: 20px;"><i class="fab fa-facebook"></i></a>
+    <a routerLink="https://www.instagram.com/coodyexpert/"
+      style="color:rgb(248, 246, 248); font-size: 40px; margin-left: 20px;"><i class="fab fa-instagram"></i></a>
+    <a routerLink="https://www.youtube.com/channel/UCJjQWwyHmKPzh4hgrHy9NaQ"
+      style="color:rgb(248, 246, 248); font-size: 40px; margin-left: 20px;"><i class="fab fa-youtube"></i></a>
+  </div>
+  <div class="copyright">
+    DATOS &copy 2020 | <a routerLink="InicioAll.html">Coody Expert</a>
+  </div>
+
+  <div class="information">
+    <a routerLink=""> Información Compañia </a> |
+    <a routerLink=""> Privacidad y Politica </a> |
+    <a routerLink=""> Terminos y Condiciones </a> |
+  </div>
+
+</div>
